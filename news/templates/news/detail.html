@@ -1,0 +1,13 @@
+<html>
+  <body>
+  {% for new in news %}
+    {% if new.link == id %}
+    <h2>{{ new.title }}</h2>
+    <p>{{ new.created }}</p>
+    <p>{{ new.text }}</p>
+    <a href="/news/">News</a>
+    {% endif %}
+  {% endfor %}
+
+  </body>
+</html>

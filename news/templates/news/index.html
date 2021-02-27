@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper News</title>
+</head>
+<body>
+<h2>Hyper news</h2>
+<div>
+    {% for new in news %}
+    <h4>{{ new.created | slice:":10" }}</h4>
+        <ul>
+        <li><a href="/news/{{new.link}}/">{{new.title}}</a></li>
+    </ul>
+    {% endfor%}
+</div>
+<div>
+    <a href="/news/">Back to News</a>
+</div>
+</body>
+</html>
